@@ -5,46 +5,25 @@ console.log("Hello 🌎");
 var keys = document.getElementById("keyTable");
 var table = document.createElement("table");
 
-const arr = [
-    ['A', 0],
-    ['B', 1],
-    ['C', 2],
-    ['D', 3],
-    ['E', 4],
-    ['F', 5],
-    ['G', 6],
-    ['H', 7],
-    ['I', 8],
-    ['J', 9],
-    ['K', 10],
-    ['L', 11],
-    ['M', 12],
-    ['N', 13],
-    ['O', 14],
-    ['P', 15],
-    ['Q', 16],
-    ['R', 17],
-    ['S', 18],
-    ['T', 19],
-    ['U', 20],
-    ['V', 21],
-    ['W', 22],
-    ['X', 23],
-    ['Y', 24],
-    ['Z', 25],
-    [' ', 26]
-  ]
+const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ']
 
-for (let i = 0; i < 2; i++) {
-    const tr = table.insertRow();
-    for (let j = 0; j < 28; j++) {
-        const td = tr.insertCell();
-        let txt = document.createTextNode(`tx`)
-        td.appendChild(txt);
-        td.style.border = '1px solid black';
-    }
-  }
-  keys.appendChild(table);
+const tr = table.insertRow();
+for (let i = 0; i < 27; i++) {
+    const td = tr.insertCell();
+    let txt = document.createTextNode(`${letters[i]}`)
+    td.appendChild(txt);
+    td.style.border = '1px solid black';
+    td.style.padding = '3px';
+}
+const tr2 = table.insertRow();
+for (let i = 0; i < 27; i++) {
+    const td = tr2.insertCell();
+    let txt = document.createTextNode(`${i}`)
+    td.appendChild(txt);
+    td.style.border = '1px solid black';
+    td.style.padding = '3px';
+}
+keys.appendChild(table);
 
 
 // RANDOMISE Q

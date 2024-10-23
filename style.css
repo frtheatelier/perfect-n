@@ -102,7 +102,6 @@ div {
   justify-content: center;
 }
 
-/* Very light scaling for our illustration */
 .title {
   color: var(--color-text-header);
   font-family: var(--font-family-header);
@@ -123,19 +122,7 @@ div {
   margin: 0;
 }
 
-/* Very light scaling for our illustration */
-.illustration {
-  max-width: 100%;
-  max-height: var(--image-max-width);
-  margin-top: var(--image-margin);
-}
-
-/* Instructions */
-.instructions {
-  margin: 1rem auto 0;
-}
-
-/* Intro block */
+/* Blocks */
 .intro-block,
 .note {
   font-family: Consolas;
@@ -165,6 +152,21 @@ div {
   border-radius: 4px;
   padding: 0.5rem 1rem;
   margin: 10px;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+}
+
+p.tbl {
+  width: 95%;
+  overflow-x: scroll;
+}
+
+/* Dialog */
+dialog {
+  width: 75vw
 }
 
 /* Button - Add it from the README instructions */
