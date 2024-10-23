@@ -17,18 +17,31 @@
   <body>
     <div class="wrapper">
       <div class="content" role="main">
-        <h3 class="title" id="theme">Getting started?</h3>
+        <h3 class="title" id="theme"></h3>
         <div class="intro-block" align="left">
           <div style="display: inline">></div>
-          <div style="display: inline" id="cyphertext">'HELLO WORLD'</div>
+          <div style="display: inline" id="cyphertext"></div>
         </div>
         
         <div>
-        <input type="text" id="answer" style="display: inline"/>
+        <input type="text" id="answer" placeholder="Enter your guess" style="display: inline"/>
           <button style="display: inline" id="guess" onclick="guess()">Guess!</button>
         </div>
         
-        <dialog id="myDialog">This is a dialog window</dialog>
+        <dialog id="winDialog">
+          <h2>
+            Congratulations!
+          </h2>
+          <p>
+            You got it right in <span id="res"></span> attempts!<br>
+            <i>Press 'Esc' to close this dialog, or refresh question</i>
+          </p>
+          <a href="game.html">
+          <button>
+            Refresh question
+          </button>
+        </a>
+        </dialog>
   
         <div>
           Guesses: <span id="guesses"></span>

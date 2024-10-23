@@ -48,12 +48,12 @@ let guesses = 0;
 document.getElementById("guesses").innerHTML = guesses;
 
 function guess() {
-  let ans = document.getElementById("answer").innerHTML;
+  let ans = document.getElementById("answer").value;
   if (ans == qs[r].answer) {
+    document.getElementById("res").innerHTML = guesses+1;
     document.getElementById("winDialog").showModal();
   } else {
     guesses += 1;
     document.getElementById("guesses").innerHTML = guesses;
-    console.log("oops");
   }
 }
