@@ -22,31 +22,54 @@
           <div style="display: inline">></div>
           <div style="display: inline" id="cyphertext"></div>
         </div>
-        
+
         <div>
-        <input type="text" id="answer" placeholder="Enter your guess" style="display: inline"/>
-          <button style="display: inline" id="guess" onclick="guess()">Guess!</button>
+          <input
+            type="text"
+            id="answer"
+            placeholder="Enter your guess"
+            style="display: inline"
+          />
+          <button style="display: inline" id="guess" onclick="guess()">
+            Guess!
+          </button>
+          <button style="display: inline" id="hint" onclick="hint()">
+            Hint
+          </button>
         </div>
-        
+
         <dialog id="winDialog">
-          <h2>
-            Congratulations!
-          </h2>
+          <h2>Congratulations!</h2>
           <p>
-            You got it right in <span id="res"></span> attempts!<br>
+            You got it right in <span id="res"></span> guesses!<br />
             <i>Press 'Esc' to close this dialog, or refresh question</i>
           </p>
           <a href="game.html">
-          <button>
-            Refresh question
-          </button>
-        </a>
+            <button>Refresh question</button>
+          </a>
         </dialog>
-  
+        
+        <dialog id="hintDialog">
+          <h2>General hints</h2>
+          <p>
+            <ul>
+              <li>Look at the header for clues</li>
+              <li>All cyphertexts translate to a common phrase or an english idiom</li>
+              <li>Try to identify which could be spaces! If not, try look for double letters.</li>
+            </ul>
+            <i>Press 'Esc' to close this dialog, or refresh question</i>
+          </p>
+          <button onclick="sp-hints()">Specific hints</button>
+        
+          <p id="sp-hints"></p>
+        </dialog>
+
         <div>
           Guesses: <span id="guesses"></span>
+          <br />
+          <br />
+          Make sure all characters are uppercase! Answers include spaces.
         </div>
-        
       </div>
     </div>
 
