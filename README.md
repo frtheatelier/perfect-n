@@ -4,7 +4,7 @@
 
 A game with a rather simple premise: decrypting encrypted text!
 
-Using Caesar's Cipher and perhaps some pattern recognition, try to uncover the original message by shifting letters. 
+Using Caesar's Cipher and perhaps some pattern recognition, try to uncover the original message by shifting letters.
 
 General tips are included in the hints, as well as question-specific hints where I give out where spaces are and the last letter. Questions could be quite tricky so don't feel too bad.
 
@@ -21,4 +21,7 @@ This small project is done solely using HTML, CSS and JavaScript (nothing too fa
 
 ## Ideas
 
-I could consider
+- adjust layout and dialogs to be mobile-friendly
+- answer box to be similar to CRYPTOGRAM (the game) as well as other features
+  - highlighting same characters
+  - edit all characters at once
