@@ -25,13 +25,13 @@
         
         <div>
         <input type="text" id="answer" style="display: inline"/>
-        <a href="game.html" style="display: inline">
-          <button>Guess!</button>
-        </a>
+          <button style="display: inline" id="guess" onclick="guess()">Guess!</button>
         </div>
+        
+        <dialog id="myDialog">This is a dialog window</dialog>
   
         <div>
-          Guesses: <span id="counter"></span>
+          Guesses: <span id="guesses"></span>
         </div>
         
       </div>
