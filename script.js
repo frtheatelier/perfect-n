@@ -1,6 +1,18 @@
 // Use your menus or right-click / control-click and choose "Inspect" > "Console"
 console.log("Hello 🌎");
 
+// KEY TABLE
+var table = document.getElementById("keyTable");
+for (var i = 0, row; row = table.rows[i]; i++) {
+   //iterate through rows
+   //rows would be accessed using the "row" variable assigned in the for loop
+   for (var j = 0, col; col = row.cells[j]; j++) {
+     //iterate through columns
+     //columns would be accessed using the "col" variable assigned in the for loop
+   }  
+}
+
+
 // RANDOMISE Q
 class Question {
   constructor(t, c, a, k, h) {
@@ -69,6 +81,10 @@ function sp_hint() {
     x.style.display = "none";
     console.log("hiint");
   }
+}
+
+function info() {
+  document.getElementById("infoDialog").showModal();
 }
 
 // CHECK ANS
