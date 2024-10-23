@@ -41,22 +41,35 @@
         </div>
 
         <div>
-          <a href="game.html" style="display: inline; text-decoration: none; margin: 10px">
+          <a
+            href="game.html"
+            style="display: inline; text-decoration: none; margin: 10px"
+          >
             Start!
           </a>
-          <button style="display: inline" onclick="info()">Caesar's Cipher?</button>
+          <button style="display: inline" onclick="info()">
+            Caesar's Cipher?
+          </button>
         </div>
-        
+
         <dialog id="infoDialog">
           <h2>What's Caesar's Cipher?</h2>
           <p>
-            Caesar's Cipher is a symmetric-key cryptosystem named after Julius Caesar. The idea is that all characters in the plaintext (in this case, the message you are guessing) are shifted by <i>k</i> number of keys to get a new character. <br />
-            For example: 'A' shifted by 3 keys becomes 'D'. Shifted by 28 keys and it becomes 'B'.
-            <div id="keyTable"></div>
-            <br /><br/>
-            <i>Press 'Esc' to close this dialog, or refresh question</i>
+            Caesar's Cipher is a symmetric-key cryptosystem named after Julius
+            Caesar. The idea is that all characters in the plaintext (in this
+            case, the message you are guessing) are shifted by <i>k</i> number
+            of keys to get a new character. <br /><br />
+            For example: 'A' shifted by 3 keys becomes 'D'. Shifted by 28 keys
+            and it becomes 'B'.
+            <br />
+          </p>
+
+          <button onclick="showKeys()">Show key table</button>
+          <p id="keyTable" style="display: none"></p>
+
+          <br /><br />
+          <i>Press 'Esc' to close this dialog, or refresh question</i>
         </dialog>
-        
       </div>
     </div>
   </body>
