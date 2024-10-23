@@ -5,7 +5,7 @@ console.log("Hello 🌎");
 class Question {
   constructor(t, c, a, k, h) {
     this.theme = t;
-    this.cyphertext = c;
+    this.ciphertext = c;
     this.answer = a;
     this.key = k;
     this.hint = h;
@@ -19,7 +19,13 @@ const helloWorld = new Question(
   9,
   "_____ ____D"
 );
-const goodLuck = new Question("Good luck!", "RGUQ PQPAUW", "BREAK A LEG", 16, "_____ _ __G");
+const goodLuck = new Question(
+  "Good luck!",
+  "RGUQ PQPAUW",
+  "BREAK A LEG",
+  16,
+  "_____ _ __G"
+);
 const catTongue = new Question(
   "I'm speechless...",
   "ECVBIQVB QWTBVQPIWG",
@@ -46,12 +52,23 @@ const qs = [helloWorld, goodLuck, catTongue, downBlazing, doneDead];
 const r = Math.floor(Math.random() * qs.length);
 
 document.getElementById("theme").innerHTML = qs[r].theme;
-document.getElementById("cyphertext").innerHTML = qs[r].cyphertext;
-document.getElementById("sp-hint").innerHTML = qs[r].cyphertext;
+document.getElementById("ciphertext").innerHTML = qs[r].ciphertext;
+document.getElementById("sp-hint").innerHTML = qs[r].hint;
 
 // SHOW HINT
 function hint() {
   document.getElementById("hintDialog").showModal();
+}
+
+function sp_hint() {
+  var x = document.getElementById("sp-hint");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    console.log("hint");
+  } else {
+    x.style.display = "none";
+    console.log("hiint");
+  }
 }
 
 // CHECK ANS
