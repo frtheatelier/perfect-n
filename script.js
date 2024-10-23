@@ -2,15 +2,21 @@
 console.log("Hello 🌎");
 
 // KEY TABLE
-var table = document.getElementById("keyTable");
-for (var i = 0, row; row = table.rows[i]; i++) {
-   //iterate through rows
-   //rows would be accessed using the "row" variable assigned in the for loop
-   for (var j = 0, col; col = row.cells[j]; j++) {
-     //iterate through columns
-     //columns would be accessed using the "col" variable assigned in the for loop
-   }  
-}
+var keys = document.getElementById("keyTable");
+var table = document.createElement("table");
+
+for (let i = 0; i < 2; i++) {
+    const tr = table.insertRow();
+    for (let j = 0; j < 29; j++) {
+      const td = tr.insertCell();
+        td.appendChild(document.createTextNode(`Cell I${i}/J${j}`));
+        td.style.border = '1px solid black';
+        if (i === 1 && j === 1) {
+          td.setAttribute('rowSpan', '2');
+      }
+    }
+  }
+  keys.appendChild(table);
 
 
 // RANDOMISE Q
