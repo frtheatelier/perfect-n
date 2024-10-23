@@ -17,27 +17,38 @@
   <body>
     <div class="wrapper">
       <div class="content" role="main">
-        <h3 class="title" id="theme"></h3>
-        <div class="intro-block" align="left">
-          <div style="display: inline">></div>
-          <div style="display: inline" id="ciphertext"></div>
-        </div>
-
+        <h3 class="title-q" id="theme"></h3>
+        <!-- FORM -->
         <div>
-          <input
-            type="text"
-            id="answer"
-            placeholder="Enter your guess"
-            style="display: inline"
-          />
-          <button style="display: inline" id="guess" onclick="guess()">
-            Guess!
-          </button>
-          <button style="display: inline" id="hint" onclick="hint()">
-            Hint
-          </button>
+          <!-- Q -->
+          <div class="intro-block">
+            <div style="display: inline">></div>
+            <div style="display: inline" id="ciphertext"></div>
+          </div>
+          <!-- A -->
+          <div>
+            <input
+              type="text"
+              id="answer"
+              placeholder="Enter your guess"
+              style="display: inline"
+            />
+            <button style="display: inline" id="guess" onclick="guess()">
+              Guess!
+            </button>
+            <button style="display: inline" id="hint" onclick="hint()">
+              Hint
+            </button>
+          </div>
+          <!-- X -->
+          <div>
+            Make sure all characters are uppercase! Answers include spaces.
+            <br /><br />
+            Guesses: <span id="guesses"></span>
+          </div>
         </div>
-
+        
+        <!-- DIALOGS -->
         <dialog id="winDialog">
           <h2>Congratulations!</h2>
           <p>
@@ -48,28 +59,26 @@
             <button>Refresh question</button>
           </a>
         </dialog>
-        
+
         <dialog id="hintDialog">
           <h2>General hints</h2>
-          <p>
-            <ul>
-              <li>Look at the header for clues</li>
-              <li>All ciphertexts translate to a common phrase or an english idiom</li>
-              <li>Try to identify which could be spaces! If not, try look for double letters.</li>
-            </ul>
-            <i>Press 'Esc' to close this dialog, or refresh question</i>
-          </p>
+          <ul>
+            <li>Look at the header for clues</li>
+            <li>
+              All ciphertexts translate to a common phrase or an english idiom
+            </li>
+            <li>
+              Try to identify which could be spaces! If not, try look for double
+              letters.
+            </li>
+          </ul>
+          <i>Press 'Esc' to close this dialog, or refresh question</i>
+          <br /><br />
           <button onclick="sp_hint()">Specific hints</button>
-        
+
           <p id="sp-hint" style="display: none"></p>
         </dialog>
-
-        <div>
-          Guesses: <span id="guesses"></span>
-          <br />
-          <br />
-          Make sure all characters are uppercase! Answers include spaces.
-        </div>
+        
       </div>
     </div>
   </body>
