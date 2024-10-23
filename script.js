@@ -1,34 +1,30 @@
-/*
-  This is your site JavaScript code - you can add interactivity!
-*/
-
-// Print a message in the browser's dev tools console each time the page loads
 // Use your menus or right-click / control-click and choose "Inspect" > "Console"
 console.log("Hello 🌎");
 
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the steps in the TODO 🚧
-*/
-const btn = document.querySelector("button"); // Get the button from the page
+// BUTTON MOVEMENT (from template)
+const btn = document.querySelector("button");
 if (btn) { // Detect clicks on the button
   btn.onclick = function () {
-    // The 'dipped' class in style.css changes the appearance on click
     btn.classList.toggle("dipped");
   };
 }
 
+// RANDOMISE Q
 
-// ----- GLITCH STARTER PROJECT HELPER CODE -----
+class Question {
+  constructor(t, c, a, k) {
+    this.theme = t;
+    this.cyphertext = c;
+    this.answer = a;
+    this.key = k;
+  }
+}
 
-// Open file when the link in the preview is clicked
-let goto = (file, line) => {
-  window.parent.postMessage(
-    { type: "glitch/go-to-line", payload: { filePath: file, line: line } }, "*"
-  );
-};
-// Get the file opening button from its class name
-const filer = document.querySelectorAll(".fileopener");
-filer.forEach((f) => {
-  f.onclick = () => { goto(f.dataset.file, f.dataset.line); };
-});
+const helloWorld = new Question("Getting started", "QNUUXIEX UM", "HELLO WORLD", 9)
+
+const qs = [helloWorld]
+const r = Math.floor(Math.random() * qs.length);
+
+document.getElementById("theme").innerHTML = qs[r].theme
+document.getElementById("cyphertext").innerHTML = qs[r].cyphertext
+document.getElementById("theme").innerHTML = qs[r].theme

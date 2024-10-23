@@ -17,19 +17,23 @@
   <body>
     <div class="wrapper">
       <div class="content" role="main">
-        <h3 class="title">Getting started?</h3>
+        <h3 class="title" id="theme">Getting started?</h3>
         <div class="intro-block" align="left">
           <div style="display: inline">></div>
           <div style="display: inline" id="cyphertext">'HELLO WORLD'</div>
         </div>
         
         <div>
-        <input type="text" id="answer" />
-        </div>
-
-        <a href="game.html">
+        <input type="text" id="answer" style="display: inline"/>
+        <a href="game.html" style="display: inline">
           <button>Guess!</button>
         </a>
+        </div>
+  
+        <div>
+          Guesses: <span id="counter"></span>
+        </div>
+        
       </div>
     </div>
 
