@@ -13,34 +13,39 @@
     <!-- The website JavaScript file -->
     <script src="/script.js" defer></script>
   </head>
-  
+
   <body>
     <div class="wrapper">
       <div class="content" role="main">
         <h1 class="title">Decrypting Caesar's Cipher?</h1>
+        <div class="note">
+          <i>Ideally, use a laptop</i>
+        </div>
         <div>
           <p>
-          With the simplicity of Caesar's Cipher, I think we can make educated guesses on what a ciphertext translates to (while not knowing the key), given that:
-        </p>
-        <ul>
-          <li>The message is a meaningful sentence in a language we know</li>
-          <li>The message is, for the most part, grammatically correct</li>
-          <li>The message uses common words</li>
-          <li>...and that the key is consistent for all letters.</li>
-        </ul>
-        <p>
-          As such, try decrypting the next few statements.
-        </p>
-        <p>
-          Oh, and we only consider messages consisting of uppercase letters and spaces.
-        </p>
+            With the simplicity of Caesar's Cipher, I think we can make educated
+            guesses on what a ciphertext translates to (while not knowing the
+            key), given that:
+          </p>
+          <ul>
+            <li>The message is a meaningful sentence in a language we know</li>
+            <li>The message is, for the most part, grammatically correct</li>
+            <li>The message uses common words</li>
+            <li>...and that the key is consistent for all letters.</li>
+          </ul>
+          <p>As such, try decrypting the next few statements.</p>
+          <p>
+            Oh, and we only consider messages consisting of uppercase letters
+            and spaces.
+          </p>
         </div>
-        
-        <a href="game.html">
-          <button>
-            Start!
-          </button>
-        </a>
+
+        <div>
+          <a href="game.html" style="display: inline; text-decoration: none; margin: 10px">
+            Start!</button>
+          </a>
+          <button style="display: inline" onclick="info()">Caesar's Cipher?</button>
+        </div>
       </div>
     </div>
   </body>

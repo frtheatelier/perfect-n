@@ -137,7 +137,7 @@ div {
 }
 
 /* Intro block */
-.intro-block {
+.intro-block, .note {
   font-family: Consolas;
   font-size: 100%;
   background: #FFFFFF;
