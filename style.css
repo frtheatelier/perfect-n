@@ -16,10 +16,10 @@ to this section's matching END comment to see page-specific styles.
 
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: #69F7BE;
-  --color-text-main: #000000;
-  --color-text-header: #2800FF;
-  --color-primary: #FFFF00;
+  --color-bg: #FCFCFC;
+  --color-text-main: #102030;
+  --color-text-header: #102030;
+  --color-primary: #102030;
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
@@ -115,6 +115,7 @@ body {
   padding: 70px 0;
   font-family: HK Grotesk;
   background-color: var(--color-bg);
+  text: var(--color-text-main);
 }
 
 div {
@@ -177,8 +178,26 @@ div {
   box-sizing: border-box;
   border-radius: 4px;
   padding: 0.5rem 1rem;
-  transition: 500ms;
-  width: 50 vw
+  width: 100%;
+  margin: 10px 0
+}
+
+.ans-block {
+  width: 100%
+}
+
+.ans-block input {
+  width: 66.5%
+}
+
+.guess-block{
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 10px
 }
 
 /* Button - Add it from the README instructions */
@@ -191,7 +210,6 @@ input {
   box-sizing: border-box;
   border-radius: 4px;
   padding: 0.5rem 1rem;
-  transition: 500ms;
 }
 
 /* Subheading */
