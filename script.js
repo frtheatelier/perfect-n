@@ -1,26 +1,24 @@
-// KEY TABLE
-var keys = document.getElementById("keyTable");
-var table = document.createElement("table");
+// CHECK VALUE
+var n = document.getElementById("n-value").value;
 
-const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ']
+function find_factors(i) {
+    let factors = [1]
+    sqrt = Math.ceil(Math.sqrt(i))
+    for (let j = 0; j <= sqrt; j++) {
+      if (i % j == 0){
+        factors.append(j)
+      }
+    }
 
-const tr = table.insertRow();
-for (let i = 0; i < 27; i++) {
-    const td = tr.insertCell();
-    let txt = document.createTextNode(`${letters[i]}`)
-    td.appendChild(txt);
-    td.style.border = '1px solid black';
-    td.style.padding = '3px';
+    return factors
 }
-const tr2 = table.insertRow();
-for (let i = 0; i < 27; i++) {
-    const td = tr2.insertCell();
-    let txt = document.createTextNode(`${i}`)
-    td.appendChild(txt);
-    td.style.border = '1px solid black';
-    td.style.padding = '3px';
-}
-keys.appendChild(table);
+
+
+function check_perfect(n: int) -> bool:
+    """check if n is perfect"""
+    factors = find_factors(n)
+    # print(factors)
+    return sum(factors) == n
 
 // SHOW INFO
 function showRes() {
@@ -28,16 +26,5 @@ function showRes() {
 }
 
 function hideRes() {
-  document.getElementById("res").hideModal();
-}
-
-function showKeys() {
-  var x = document.getElementById("keyTable");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    console.log("keys");
-  } else {
-    x.style.display = "none";
-    console.log("keys hide");
-  }
+  document.getElementById("res").close();
 }
