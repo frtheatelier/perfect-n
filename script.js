@@ -43,7 +43,11 @@ console.log(n)
   
   let f = find_factors(n);
   f.push(n)
-  document.getElementById("factors").innerHTML = f.sort();
+  f.sort(function(a, b) {
+  return a - b;
+});
+
+  document.getElementById("factors").innerHTML = f;
   document.getElementById("res").showModal();
 }
 
