@@ -23,8 +23,12 @@ for (let i = 0; i < 27; i++) {
 keys.appendChild(table);
 
 // SHOW INFO
-function info() {
-  document.getElementById("infoDialog").showModal();
+function showRes() {
+  document.getElementById("res").showModal();
+}
+
+function hideRes() {
+  document.getElementById("res").hideModal();
 }
 
 function showKeys() {
