@@ -1,12 +1,10 @@
 // CHECK VALUE
-var n = document.getElementById("n-input").value;
-
 function find_factors(i) {
   let factors = [1];
   let root = Math.ceil(Math.sqrt(i));
   for (let j = 0; j <= root; j++) {
+    console.log(j, root, Math.sqrt(i), i)
     if (i % j == 0 && !factors.includes(j)) {
-      console.log(j)
       factors.append(j);
       factors.append(i / j);
       console.log("append", j)
@@ -36,6 +34,10 @@ function analysis(i) {
 
 // SHOW INFO
 function showRes() {
+var n = parseInt(document.getElementById("input").value);
+
+console.log(s, n)
+  
   document.getElementById("n-value").innerHTML = n;
   document.getElementById("perf").innerHTML = analysis(n);
   document.getElementById("factors").innerHTML = find_factors(n);
