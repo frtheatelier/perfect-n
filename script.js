@@ -2,11 +2,11 @@
 function find_factors(i) {
   let factors = [1];
   let root = Math.ceil(Math.sqrt(i));
-  for (let j = 0; j <= root; j++) {
+  for (let j = 2; j <= root; j++) {
     console.log(j, root, Math.sqrt(i), i)
     if (i % j == 0 && !factors.includes(j)) {
-      factors.append(j);
-      factors.append(i / j);
+      factors.push(j);
+      factors.push(i / j);
       console.log("append", j)
     }
   }
@@ -36,11 +36,14 @@ function analysis(i) {
 function showRes() {
 var n = parseInt(document.getElementById("input").value);
 
-console.log(s, n)
+console.log(n)
   
   document.getElementById("n-value").innerHTML = n;
   document.getElementById("perf").innerHTML = analysis(n);
-  document.getElementById("factors").innerHTML = find_factors(n);
+  
+  let f = find_factors(n);
+  f.push(n)
+  document.getElementById("factors").innerHTML = f.sort();
   document.getElementById("res").showModal();
 }
 
