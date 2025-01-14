@@ -1,2 +1,3 @@
-# is-n-perfect
-a web app to determine if a number is perfect
+# Project Details
+
+it checks whether a number is a perfect number. It also displays the factors of the number entered.

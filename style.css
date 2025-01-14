@@ -1,0 +1,180 @@
+:root {
+  --color-bg: #fcfcfc;
+  --color-text-main: #102030;
+  --color-text-header: #0f3b66;
+  --color-primary: #102030;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "Consolas";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Our remix on glitch button */
+.btn--remix {
+  font-family: HK Grotesk;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.btn--remix img {
+  margin-right: 0.5rem;
+}
+.btn--remix:hover {
+  background-color: #d0fff1;
+}
+
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  width: 80vw;
+  margin: auto;
+  padding: 70px 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+div {
+  text-align: left;
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: var(--color-text-header);
+  font-family: var(--font-family-header);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+}
+
+.title-q {
+  color: var(--color-text-header);
+  font-family: var(--font-family-header);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 105%;
+  margin: 0;
+}
+
+/* Blocks */
+.intro-block,
+.note {
+  font-family: Consolas;
+  font-size: 100%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.ans-block {
+  width: 100%;
+}
+
+.ans-block input {
+  width: 66.5%;
+}
+
+.guess-block {
+  font-size: 100%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 10px;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+p.tbl {
+  width: 95%;
+  overflow-x: auto;
+}
+
+td {
+  min-width: 30px;
+}
+
+/* Dialog */
+dialog {
+  width: 75vw;
+}
+
+/* Button - Add it from the README instructions */
+button,
+input,
+a {
+  font-family: inherit;
+  font-size: 100%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  color: var(--color-text);
+}
+
+/* Subheading */
+h2 {
+  color: var(--color-text-header);
+}
