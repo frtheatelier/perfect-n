@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Is the number perfect?</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="content" role="main">
+        <h1 class="title">Is n perfect?</h1>
+        <div class="note">
+          <i>Ideally, use a laptop or desktop or have a keyboard</i>
+        </div>
+        <div>
+          <p>
+            <b>What's a perfect number?</b> <br />
+            A perfect number is the sum of all its divisors (not including the
+            number itself). An example would be 6 = 1 + 2 + 3
+          </p>
+          <p>
+            Enter a natural number between 0 - 1000000 (inclusive) and get your
+            results
+          </p>
+        </div>
+        <div>
+          <input type="text" placeholder="12345" id="input" />
+          <button style="display: inline" onclick="showRes()">Is it?</button>
+        </div>
+
+        <dialog id="res">
+          <button
+            style="float: right; border: 0; background: none"
+            onclick="hideRes()"
+          >
+            X
+          </button>
+          <b
+            ><span id="n-value"></span> is <span id="perf"></span> perfect
+            number</b
+          >
+          <br />
+          <p>Factors of n: <span id="factors"></span></p>
+        </dialog>
+      </div>
+    </div>
+  </body>
+</html>
