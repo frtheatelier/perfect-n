@@ -18,9 +18,9 @@
     <div class="wrapper">
       <div class="content" role="main">
         <h1 class="title">Is n perfect?</h1>
-        <div class="note">
+<!--         <div class="note">
           <i>Ideally, use a laptop or desktop or have a keyboard</i>
-        </div>
+        </div> -->
         <div>
           <p>
             <b>What's a perfect number?</b> <br />
@@ -36,6 +36,22 @@
           <input type="text" placeholder="12345" id="input" />
           <button style="display: inline" onclick="showRes()">Is it?</button>
         </div>
+        <span id="nan-alert"><small></small></span>
+        <p>
+          <small>
+            Fun fact: There are only 4 (known) numbers in that range that are considered
+            perfect :D Try and see which ones they are!
+          </small>
+        </p>
+        <div class="note" id="perfnumlist">
+          <b>Discovered perfect numbers:</b>
+          <span id="num1">???</span>
+          <span id="num2">???</span>
+          <span id="num3">???</span>
+          <span id="num4">???</span>
+        </div>
+        
+        <a href="https://frtheatelier.github.io/aleatoire/">See other projects</a>
 
         <dialog id="res">
           <button

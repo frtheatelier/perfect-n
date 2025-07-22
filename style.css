@@ -172,9 +172,17 @@ a {
   border-radius: 4px;
   padding: 0.5rem 1rem;
   color: var(--color-text);
+  
+  text-decoration: none;
 }
 
 /* Subheading */
 h2 {
   color: var(--color-text-header);
+}
+
+/* NaN alert */
+#nan-alert {
+  font-size: 10pt;
+  color: red;
 }
