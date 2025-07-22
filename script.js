@@ -1,3 +1,5 @@
+const counter = 0;
+
 // CHECK VALUE
 function find_factors(i) {
   let factors = [1];
@@ -28,6 +30,7 @@ function check_perfect(i) {
 
 function analysis(i) {
   if (check_perfect(i)) {
+    addNumber(i);
     return "A";
   } else {
     return "NOT A";
@@ -36,7 +39,16 @@ function analysis(i) {
 
 // SHOW INFO
 function showRes() {
+  document.getElementById("nan-alert").innerHTML = "";
+
   var n = parseInt(document.getElementById("input").value);
+
+  console.log(isNaN(n));
+
+  if (isNaN(n)) {
+    document.getElementById("nan-alert").innerHTML = "Please enter a number :(";
+    return;
+  }
 
   console.log(n);
 
@@ -57,4 +69,35 @@ function showRes() {
 
 function hideRes() {
   document.getElementById("res").close();
+}
+
+// ADD TO KNOWN NUMBERS
+
+function addNumber(n) {
+  console.log("adding number...");
+
+  //   if (!document.getElementById("numbers")) {
+  //     const numlist = document.createElement('ul');
+  //     numlist.setAttribute("id", "numbers");
+
+  //     console.log("created!")
+  //   }
+
+  let arr = [];
+
+  for (let index = 1; index < 5; index++) {
+    var content = parseInt(document.getElementById("num" + index).innerHTML);
+    console.log(
+      "num" + index + ": " + content
+    );
+
+    if (isNaN(content) && !arr.includes(n)) { // empty slot and number not included
+      document.getElementById("num" + index).innerHTML = n;
+      return;
+    } else if (!isNaN(content)) { // slot is filled with a existing number
+      arr.push(content);
+    }
+  }
+
+  console.log("number added. hopefully.");
 }
